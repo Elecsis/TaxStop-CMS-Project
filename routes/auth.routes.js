@@ -70,7 +70,7 @@ router.post("/signup", isLoggedOut, (req, res) => {
         //********************* */
         // Bind the user to the session object****** does not use currentUser **** different key
         req.session.currentUser = user;
-        res.redirect("/");
+        res.redirect("/myProfile");
       })
       .catch((error) => {
         if (error instanceof mongoose.Error.ValidationError) {
@@ -122,7 +122,7 @@ router.post("/login", isLoggedOut, (req, res, next) => {
         });
       }
 
-      // If user is found based on the username, check if the in putted password matches the one saved in the database
+      // If user is found based on the username, check if the inputed password matches the one saved in the database
       bcrypt.compare(password, user.password).then((isSamePassword) => {
         if (!isSamePassword) {
           return res.status(400).render("auth/login", {
