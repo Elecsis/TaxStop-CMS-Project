@@ -1,14 +1,23 @@
-<h1>Login</h1>
-<form action="/login" method="POST">
-   <label> Username
-      <input type="text" name="username">
-   </label>
-   <label> Password
-      <input type="password" name="password">
-   </label>
 
-   <button type="submit">Login</button>
-</form>
+
+<div class="container-lg pt-5" >
+    <form class="card col-10" action="/login" method="POST">
+    <h1 class="text-center p-2">Login</h1>
+      <div class="mb-3 col-8 mx-auto">
+        <label  class="form-label">Username</label>
+        <input type="text" class="form-control"   name="username" >
+        <div id="userNameHelp" class="form-text">Please enter Username.</div>
+      </div>
+      <div class="mb-3 col-8 mx-auto">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1" name="password">
+        <div id="passwordHelp" class="form-text" > Please enter password.</div>
+      </div>
+      <div class="d-grid p-5 col-6 mx-auto">
+        <button type="submit" class="btn btn-primary">Login</button>
+      </div>
+    </form>
+</div>
 
 {{#if errorMessage}}
    {{errorMessage}}
