@@ -7,25 +7,15 @@ const taxFormSchema = new Schema({
     clientLastName:{type: String, required: true},
     address: {
         addressLine:{type: String, required: true},
-        aptNumLine:{type: String, required: true},
+        aptNumLine:{type: String},
         city:{type: String, required: true},
         State:{type: String, required: true},
         zipCode:{type: Number, required: true},
     },
 
     clientEmail:{type: String, required: true},
-    clientDateOfBirth:{type: Date, required: true},
+    clientDateOfBirth:{type: String, required: true},
     clientOccupation:{type: String, required: true},
-
-
-    spouseFirstName:{type: String},
-    spouseMiddleName:{type: String},
-    spouseLastName:{type: String},
-    spouseEmail:{type: String},
-    spouseDateOfBirth:{type: Date},
-    spouseOccupation:{type:String},
-
-    
 },{
     timestamps: true    
 });

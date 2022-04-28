@@ -4,11 +4,16 @@ const isLoggedIn = require('../middleware/isLoggedIn')
 
 const TaxForm = require('../models/Tax.form.model');
 
-router.get("/taxForm", isLoggedIn,(req,res, next)=>{
-    res.render("user-taxform");
+///GETS tax-formview page
+router.get("/tax-form", isLoggedIn,(req,res, next)=>{
+    res.render("user-tax-form");
   })
 
-//TaxForm.create(Form,(error,))
+  router.post("/tax-form", isLoggedIn, (req, res) => {
+
+    
+  })
+
 
 
 module.exports = router;
