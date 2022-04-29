@@ -1,5 +1,6 @@
 const router = require("express").Router();
 const isLoggedIn = require('../middleware/isLoggedIn')
+const TaxForm = require('../models/Tax.form.model');
 /* GET home page */
 router.get("/", (req, res, next) => {
   res.render("index");
@@ -27,6 +28,15 @@ router.get("/location", (req, res, next) => {
 
 // verifies that user is \/ \/ \/ \/ logged in to have access to myProfile view
 router.get("/myProfile", isLoggedIn,(req,res, next)=>{
-  res.render("user-profile");
+  TaxForm.find()
+  .then(taxFormArray =>{
+    res.render("user-profile", {taxFormArray});
+
+  })
+  
+  
+  
+  
+
 })
 module.exports = router;

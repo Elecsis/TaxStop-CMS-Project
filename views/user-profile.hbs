@@ -14,3 +14,15 @@
     </div>
 </section>
 </div>
+<div>
+    {{#each taxFormArray}}
+    <div class="card" style="width: 18rem;">
+    <h2>Completed Tax Form</h2>    
+    <div class="card-body">
+        <h6 class="card-subtitle mb-2 text-muted">{{taxYear}}</h6>
+        <p class="card-text">Theis your completed Client Tax Data Form for {{taxYear}}</p>
+        
+        <a class="btn btn-primary" href="/tax-form/{{_id}}" role="button">View Form</a>
+    </div>
+    {{/each}}
+</div>

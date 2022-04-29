@@ -15,19 +15,19 @@
   </div>
   <div class="col-12">
     <label for="inputAddress" class="form-label">Address *</label>
-    <input type="text" class="form-control"  placeholder="1234 Main St" name="address.addressLine">
+    <input type="text" class="form-control"  placeholder="1234 Main St" name="client.address.addressLine">
   </div>
   <div class="col-12">
     <label for="inputAddress2" class="form-label">Address 2</label>
-    <input type="text" class="form-control"  placeholder="Apartment #" name="address.aptNumLine">
+    <input type="text" class="form-control"  placeholder="Apartment #" name="client.address.aptNumLine">
   </div>
   <div class="col-md-6">
     <label for="inputCity" class="form-label">City *</label>
-    <input type="text" class="form-control"  name="address.city">
+    <input type="text" class="form-control"  name="client.address.city">
   </div>
   <div class="col-md-3">
     <label for="inputState" class="form-label">State *</label>
-    <select id="inputState" class="form-select">
+    <select id="inputState" class="form-select" name="client.address.state">
       <option selected>Choose...</option>
       <option value="AL">Alabama</option>
       <option value="AK">Alaska</option>
@@ -83,16 +83,16 @@
     </select>
   </div>
   <div class="col-md-3">
-    <label for="inputZip" class="form-label">Zip *</label>
-    <input type="text" class="form-control" >
+    <label for="inputZip" class="form-label">Zip Code *</label>
+    <input type="text" class="form-control" name="client.address.zipCode">
   </div>
   <div class="col-12">
     <label for="inputEmail" class="form-label">Email *</label>
-    <input type="text" class="form-control"  placeholder="ie joe@shmo.com">
+    <input type="text" class="form-control"  placeholder="ie joe@shmo.com" name="clientEmail">
   </div>
   <div class="col-md-4">
       <label for="inputTaxYear" class="form-label">Tax Year *</label>
-      <select id="inputTaxYear" class="form-select">
+      <select id="inputTaxYear" class="form-select" name="taxYear">
         <option selected>Choose...</option>
         <option value="2021">2021 Tax Year</option>
         <option value="2021">2020 Tax Year</option>
@@ -101,11 +101,11 @@
   </div>
   <div class="col-md-4">
     <label for="inputEmail4" class="form-label">Date of Birth *</label>
-    <input type="text" class="form-control" placeholder="MM/DD/YY">
+    <input type="text" class="form-control" placeholder="MM/DD/YY" name="clientDateOfBirth">
   </div>
   <div class="col-md-4">
     <label for="inputEmail4" class="form-label">Occupation *</label>
-    <input type="text" class="form-control" >
+    <input type="text" class="form-control" name="clientOccupation">
   </div>
   <div class="col-12">
     <button type="submit" class="btn btn-primary">Submit Form</button>
